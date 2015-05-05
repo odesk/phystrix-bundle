@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is a part of the Phystrix Bundle
+ * This file is a part of the Phystrix Bundle.
  *
  * Copyright 2013-2015 oDesk Corporation. All Rights Reserved.
  *
@@ -16,6 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 namespace Odesk\Bundle\PhystrixBundle\Tests\DependencyInjection;
 
 use Odesk\Bundle\PhystrixBundle\DependencyInjection\OdeskPhystrixExtension;
@@ -48,7 +49,7 @@ class OdeskPhystrixExtensionTest extends \PHPUnit_Framework_TestCase
      */
     public function testServiceIsPublic($serviceName)
     {
-        $container = new ContainerBuilder;
+        $container = new ContainerBuilder();
         $this->extension->load(array(array('default' => array())), $container);
 
         $this->assertTrue($container->hasDefinition($serviceName), "Service $serviceName must be defined");
@@ -129,7 +130,7 @@ class OdeskPhystrixExtensionTest extends \PHPUnit_Framework_TestCase
                 'healthSnapshotIntervalInMilliseconds' => 104,
                 'rollingStatisticalWindowInMilliseconds' => 105,
                 'rollingStatisticalWindowBuckets' => 106,
-            )
+            ),
         );
 
         $container = new ContainerBuilder();

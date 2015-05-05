@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is a part of the Phystrix Bundle
+ * This file is a part of the Phystrix Bundle.
  *
  * Copyright 2013-2015 oDesk Corporation. All Rights Reserved.
  *
@@ -16,14 +16,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 namespace Odesk\Bundle\PhystrixBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
- * Class Configuration provides schema for the bundle configuration
- * @package Odesk\Bundle\PhystrixBundle\DependencyInjection
+ * Class Configuration provides schema for the bundle configuration.
  */
 class Configuration implements ConfigurationInterface
 {
