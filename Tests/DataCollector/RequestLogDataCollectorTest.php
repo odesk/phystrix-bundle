@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is a part of the Phystrix Bundle.
  *
@@ -16,7 +17,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 namespace Odesk\Bundle\PhystrixBundle\Tests\DataCollector;
 
 use Odesk\Bundle\PhystrixBundle\DataCollector\RequestLogDataCollector;
@@ -53,7 +53,7 @@ class RequestLogDataCollectorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @param string   $name
-     * @param integer  $executionTime
+     * @param int      $executionTime
      * @param string[] $executionEvents
      *
      * @return \PHPUnit_Framework_MockObject_MockObject|\Odesk\Phystrix\AbstractCommand
