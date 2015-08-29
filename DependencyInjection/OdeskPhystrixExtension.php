@@ -1,6 +1,7 @@
 <?php
+
 /**
- * This file is a part of the Phystrix Bundle
+ * This file is a part of the Phystrix Bundle.
  *
  * Copyright 2013-2015 oDesk Corporation. All Rights Reserved.
  *
@@ -21,12 +22,10 @@ namespace Odesk\Bundle\PhystrixBundle\DependencyInjection;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
-use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
- * Class OdeskPhystrixExtension configures phystrix services
- * @package Odesk\Bundle\PhystrixBundle\DependencyInjection
+ * Class OdeskPhystrixExtension configures phystrix services.
  */
 class OdeskPhystrixExtension extends Extension
 {

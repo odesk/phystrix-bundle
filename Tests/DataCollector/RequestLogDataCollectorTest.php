@@ -1,6 +1,7 @@
 <?php
+
 /**
- * This file is a part of the Phystrix Bundle
+ * This file is a part of the Phystrix Bundle.
  *
  * Copyright 2013-2015 oDesk Corporation. All Rights Reserved.
  *
@@ -24,7 +25,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class RequestLogDataCollectorTest extends \PHPUnit_Framework_TestCase
 {
-
     public function testCollect()
     {
         /** @var \PHPUnit_Framework_MockObject_MockObject|\Odesk\Phystrix\RequestLog $requestLogMock */
@@ -34,27 +34,28 @@ class RequestLogDataCollectorTest extends \PHPUnit_Framework_TestCase
         $requestLogMock->expects($this->once())
             ->method('getExecutedCommands')
             ->willReturn(array(
-                    $this->prepareCommandMock('Command1', 234, array('e11','e12')),
+                    $this->prepareCommandMock('Command1', 234, array('e11', 'e12')),
                     $this->prepareCommandMock('Command2', 345, array('e2')),
-                    $this->prepareCommandMock('Command3', 456, array('e31','e32','e33')),
+                    $this->prepareCommandMock('Command3', 456, array('e31', 'e32', 'e33')),
                 ));
 
         $collector = new RequestLogDataCollector($requestLogMock);
         $collector->collect(new Request(), new Response());
 
         $this->assertEquals(array(
-                array('class' => 'Command1', 'duration' => 234, 'events' => array('e11','e12')),
+                array('class' => 'Command1', 'duration' => 234, 'events' => array('e11', 'e12')),
                 array('class' => 'Command2', 'duration' => 345, 'events' => array('e2')),
-                array('class' => 'Command3', 'duration' => 456, 'events' => array('e31','e32','e33')),
+                array('class' => 'Command3', 'duration' => 456, 'events' => array('e31', 'e32', 'e33')),
             ), $collector->getCommands());
 
         $this->assertSame('phystrix', $collector->getName());
     }
 
     /**
-     * @param $name
-     * @param $executionTime
-     * @param $executionEvents
+     * @param string   $name
+     * @param int      $executionTime
+     * @param string[] $executionEvents
+     *
      * @return \PHPUnit_Framework_MockObject_MockObject|\Odesk\Phystrix\AbstractCommand
      */
     private function prepareCommandMock($name, $executionTime, $executionEvents)
@@ -70,6 +71,7 @@ class RequestLogDataCollectorTest extends \PHPUnit_Framework_TestCase
         $commandMock->expects($this->once())
             ->method('getExecutionEvents')
             ->willReturn($executionEvents);
+
         return $commandMock;
     }
 }

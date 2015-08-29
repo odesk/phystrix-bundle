@@ -1,6 +1,7 @@
 <?php
+
 /**
- * This file is a part of the Phystrix Bundle
+ * This file is a part of the Phystrix Bundle.
  *
  * Copyright 2013-2015 oDesk Corporation. All Rights Reserved.
  *
